@@ -118,12 +118,12 @@ def imshow(inp, title=None):
 """
 
 # Get a batch of training data
-inputs, classes = next(iter(dset_loaders['train']))
+#inputs, classes = next(iter(dset_loaders['train']))
 
 # Make a grid from batch
-out = torchvision.utils.make_grid(inputs)
+#out = torchvision.utils.make_grid(inputs)
 
-imshow(out, title=[dset_classes[x] for x in classes])
+#imshow(out, title=[dset_classes[x] for x in classes])
 
 
 ######################################################################
@@ -292,7 +292,7 @@ model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler,
 ######################################################################
 #
 
-visualize_model(model_ft)
+#visualize_model(model_ft)
 
 
 ######################################################################
@@ -306,7 +306,7 @@ visualize_model(model_ft)
 # You can read more about this in the documentation
 # `here <http://pytorch.org/docs/notes/autograd.html#excluding-subgraphs-from-backward>`__.
 #
-
+'''
 model_conv = torchvision.models.resnet18(pretrained=True)
 for param in model_conv.parameters():
     param.requires_grad = False
@@ -340,7 +340,8 @@ model_conv = train_model(model_conv, criterion, optimizer_conv,
 ######################################################################
 #
 
-visualize_model(model_conv)
+#visualize_model(model_conv)
 
-plt.ioff()
-plt.show()
+#plt.ioff()
+#plt.show()
+'''
